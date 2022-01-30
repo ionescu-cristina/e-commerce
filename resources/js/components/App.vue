@@ -14,9 +14,11 @@
 <script>
 import vueFilePond from "vue-filepond";
 import "filepond/dist/filepond.min.css";
+import FilePondPluginFileValidaeType from 'filepond-plugin-file-validate-type';
+
 
 //use vueFilePond function to create our component
-const FilePond = vueFilePond();
+const FilePond = vueFilePond(FilePondPluginFileValidaeType);
 
 export default {
   components: {
