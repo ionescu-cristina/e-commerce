@@ -6,6 +6,7 @@
       label-idle="Click to choose image, or drag here..."
       server="/upload"
       @init="filepondInitialized"
+      accepted-file-types="image/*"
     />
   </div>
 </template>
