@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Image;
+
 
 class ImageController extends Controller
 {
@@ -42,16 +44,16 @@ class ImageController extends Controller
             'image' => 'required | file | image'
         ]);
 
-        $path = $request->file('image')->store('public/images');
+        $path = $request->file('image')->store('public/upload');
 
-        if($path) {
+        if(!$path) {
             return response()->json(['error', 'The file could not be saved'], 500);
         }
 
         $uploadedFile = $request->file('image');
 
         $image = Image::create([
-            'name' => $uploadedFile->hasName(),
+            'title' => $uploadedFile->hashName(),
             'extension' => $uploadedFile->extension(),
             'size' => $uploadedFile->getSize()
         ]);
@@ -67,7 +69,7 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        //
+        return Image::latest()->pluck('title')->toArray();
     }
 
     /**
