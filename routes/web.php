@@ -11,5 +11,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/images', ImageController::class);
 
-Route::get('/upload', [ImageController::class, 'store']);
+Route::post('/upload', [ImageController::class, 'store']);
 
