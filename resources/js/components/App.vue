@@ -8,11 +8,6 @@
       accepted-file-types="image/*"
     />
   </div>
-  <div>
-      <div v-for="(image, index) in images" :key="index">
-        <img :src="'/storage/upload/' + image" alt="" >
-      </div>
-  </div>
 </template>
 
 
