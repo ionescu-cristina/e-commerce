@@ -24,10 +24,10 @@ import FilePondPluginFileValidaeType from "filepond-plugin-file-validate-type";
 setOptions({
   server: {
     process: {
-      url: "upload",
+      url: "./upload",
       method: "POST",
       headers: {
-        "X-CSRF-TOKEN": document.head.querySelector('meta[name="csrf_token"]')
+        "X-CSRF-TOKEN": document.head.querySelector('meta[name="csrf-token"]')
           .content,
       },
     },
