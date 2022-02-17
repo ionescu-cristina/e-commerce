@@ -14,4 +14,6 @@ Route::resource('/images', ImageController::class);
 
 Route::post('/upload', [ImageController::class, 'store']);
 
-Route::resource('products', ProductController::class);
+Route::get('/{any}', function(){
+    return view('landing');
+})->where('any', '.*');
