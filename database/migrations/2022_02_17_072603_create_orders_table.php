@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('quantity')->default('1');
             $table->string('address')->nullable();
-            $table->bollean('is_delivered')->default('false');
+            $table->boolean('is_delivered')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
