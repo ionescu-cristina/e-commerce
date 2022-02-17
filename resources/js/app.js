@@ -2,6 +2,6 @@ require("./bootstrap");
 
 //vue initialization
 import { createApp } from "vue";
-import App from './components/App.vue';
+import ImageUploading from './components/ImageUploading.vue';
 
-createApp(App).mount('#app');
+createApp(ImageUploading).mount('#app');
