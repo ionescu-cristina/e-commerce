@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use DateTime;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -18,25 +19,37 @@ class ProductSeeder extends Seeder
                 'name' => 'Honda',
                 'price' => '23',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                'contact_phone' => '12345'
+                'units' => '3',
+                'image' => 'https://picsum.photos/200',
+                'created_at' => new DateTime(),
+                'update_at' => null,
             ],
             [
-                'name' => 'Fiat',
-                'price' => '34',
+                'name' => 'Honda',
+                'price' => '23232',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                'contact_phone' => '12345'
+                'units' => '65',
+                'image' => 'https://picsum.photos/200',
+                'created_at' => new DateTime(),
+                'update_at' => null,
             ],
             [
-                'name' => 'Volvo',
-                'price' => '23',
+                'name' => 'Honda',
+                'price' => '67676',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                'contact_phone' => '12345'
+                'units' => '31',
+                'image' => 'https://picsum.photos/200',
+                'created_at' => new DateTime(),
+                'update_at' => null,
             ],
             [
-                'name' => 'Bar',
-                'price' => '34',
+                'name' => 'Honda',
+                'price' => '3445',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                'contact_phone' => '12345'
+                'units' => '7',
+                'image' => 'https://picsum.photos/200',
+                'created_at' => new DateTime(),
+                'update_at' => null,
             ],
         ];
 
