@@ -18,8 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('name')->nullable();
             $table->integer('price')->nullable();
             $table->string('description')->nullable();
+            $table->unsignedInteger('units')->default(0);
             $table->string('image')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
